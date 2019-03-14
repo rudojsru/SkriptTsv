@@ -1,0 +1,3 @@
+1) the .tsv file should be called " cadastral_parcels.tsv "
+2) the file should be in the same folder as the program. Then you need to run the program.
+3) Search is performed on the first column
