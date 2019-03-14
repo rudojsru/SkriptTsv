@@ -1,16 +1,10 @@
 import java.io.*;
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 
 public class TextWriterReader {
-//
-//        TextWriterReader textWriterReader = new TextWriterReader();
-//        Map map = textWriterReader.readFromTsvMap();
-//        //System.out.println(map.get("101O10-1.0001.100"));
-//
 
+//reads data from a file and creates a map, where the first text element is a key.
     public Map readFromTsvMap() {
 
         String track = trackToFiles(); // Stiezka do faila gdzie liezy program
@@ -43,7 +37,7 @@ public class TextWriterReader {
     }
 
 
-
+ //  The path to failure where the program lies
     public static String trackToFiles() {
         String track = new File(".").getAbsolutePath();
 
@@ -59,4 +53,3 @@ public class TextWriterReader {
 
     }
 }
-//Iloveyou

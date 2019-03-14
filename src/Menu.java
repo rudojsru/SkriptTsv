@@ -1,7 +1,5 @@
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.Set;
 
 
 public class Menu {
@@ -17,6 +15,7 @@ public class Menu {
         menu.runMenu();
     }
 
+    // program menu
     public void runMenu() {
         printHeader();
         while (!exit) {
@@ -39,6 +38,7 @@ public class Menu {
         System.out.println(" 0) EXIT");
     }
 
+    // select operation from the menu and verify the correctness of the choice of the command from the menu
     private int getInput() {
         int choise = -1;
         do {
@@ -57,6 +57,7 @@ public class Menu {
         return choise;
     }
 
+    // stock selection
     private void performAction(int choise) {
         switch (choise) {
             case 0:
@@ -72,7 +73,7 @@ public class Menu {
 
         }
     }
-
+    // search for the desired element
     private void searchById() {
         Map map = textWriterReader.readFromTsvMap();
         System.out.println("Please provide your search word");
