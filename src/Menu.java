@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
@@ -26,10 +27,10 @@ public class Menu {
     }
 
     private void printHeader() {
-        System.out.println("+-------------------+");
-        System.out.println("| Welcom to Mr RS   |");
-        System.out.println("|Avesome Search App   |");
-        System.out.println("+-------------------+");
+        System.out.println("+---------------------+");
+        System.out.println("|    Welcom to        |");
+        System.out.println("| Avesome Search App  |");
+        System.out.println("+---------------------+");
     }
 
     private void printMenu() {
@@ -48,10 +49,10 @@ public class Menu {
             } catch (NumberFormatException e) {
                 System.out.println("Invalid selection. Number only please");
             }
-            if (choise < 0 || choise > 4) {
+            if (choise < 0 || choise > 2) {
                 System.out.println("Choice outside of range. Please chose again");
             }
-        } while (choise < 0 || choise > 4);
+        } while (choise < 0 || choise > 2);
 
         return choise;
     }
@@ -72,19 +73,23 @@ public class Menu {
         }
     }
 
-    private String searchById() {
+    private void searchById() {
         Map map = textWriterReader.readFromTsvMap();
         System.out.println("Please provide your search word");
         String choise = keybord.nextLine();
-        Set keys = map.keySet();
-        for (int i=0; i<keys.size(); i++) {
-            if(choise == keys.){
+        boolean wasFound=false;
 
-            } 
+        for (Object s:map.keySet()) {
+            if(choise.equals((String)s )) {
+                System.out.println(map.get(s));
+                wasFound=true;
+            }
         }
-
-        //System.out.println(map.get("101O10-1.0001.100"));
-        return null;
+          if(wasFound==false){
+              String s="ID WAS NOT FOUND";
+              System.out.println(s);
+          }
+        System.out.println("<------------------>");
     }
 
 }

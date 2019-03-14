@@ -5,12 +5,11 @@ import java.util.List;
 import java.util.Map;
 
 public class TextWriterReader {
-    public static void main(String[] args) {
-        TextWriterReader textWriterReader = new TextWriterReader();
-        Map map = textWriterReader.readFromTsvMap();
-        //System.out.println(map.get("101O10-1.0001.100"));
-
-    }
+//
+//        TextWriterReader textWriterReader = new TextWriterReader();
+//        Map map = textWriterReader.readFromTsvMap();
+//        //System.out.println(map.get("101O10-1.0001.100"));
+//
 
     public Map readFromTsvMap() {
 
@@ -30,7 +29,6 @@ public class TextWriterReader {
                 map.put(array[0], line);
 
             }
-            System.out.println("---------------");
             br.close();
 
         } catch (FileNotFoundException e) {
@@ -56,7 +54,7 @@ public class TextWriterReader {
             track += splitTrack[i];
         }
 
-        System.out.println(track);
+       // System.out.println(track);
         return track;
 
     }
