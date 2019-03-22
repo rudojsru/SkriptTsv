@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 public class Menu {
 
+
+/*
     Scanner keybord = new Scanner(System.in);
     TextWriterReader textWriterReader = new TextWriterReader();
-    Map map = textWriterReader.readFromTsvMap();
+    Map map; // = textWriterReader.readFromTsvMap();
     //System.out.println(map.get("101O10-1.0001.100"));
     boolean exit;
 
@@ -92,6 +94,6 @@ public class Menu {
           }
         System.out.println("<------------------>");
     }
-
+*/
 }
 
