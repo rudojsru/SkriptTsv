@@ -31,7 +31,7 @@ public class TextWriterReader {
     public List readFromTsvList() {
 
         String track = trackToFiles(); // Stiezka do faila gdzie liezy program
-        final String TEXT = track + "cad.tsv";
+        final String TEXT = track + "cad2.tsv";
 
         BufferedReader br;
         List<String> list = new ArrayList<>();
@@ -80,7 +80,7 @@ public class TextWriterReader {
             listB.add(a[6]);
             if (s2.length>1) {
                 listB.add(s2[1].replaceAll("0", ""));
-                listB.add(s2[2]);
+                listB.add(s2[s2.length-1]);
             }
 
         }
